@@ -1,7 +1,7 @@
 ﻿using GestionDeTareas;
 using EspacioCalculadora;
 
-Console.WriteLine("\n------Ejercicio 21------\n");
+Console.WriteLine("\n------Ejercicio 1------\n");
 
 int op;
 string ingresado;
@@ -155,11 +155,12 @@ do
         }
 } while (op != 0);
 
-Calculadora miCalculadora = new Calculadora();
 
 Console.WriteLine("\n----------Ejercicio 2----------\n");
+Calculadora miCalculadora = new Calculadora();
 op=0;
 control=0;
+
 do
 {
     Console.WriteLine($"Valor actual del operando = {miCalculadora.Resultado}\n");
@@ -210,13 +211,19 @@ do
                 break;
             case 6:
                 int k = 1;
-                foreach (Calculadora.Operacion operacion1 in miCalculadora.Historial)
+                if (miCalculadora.Historial != null)
                 {
-                    Console.WriteLine($"\n---- OPERACION {k}----");
-                    Console.WriteLine($"\nTipo de operacion realizado: {operacion1.OperacionRealizada}");
-                    Console.WriteLine($"\nDato de entrada: {operacion1.ResultadoAnterior}");
-                    Console.WriteLine($"\nResultado: {operacion1.NuevoValor}");
-                    k++;
+                    foreach (Calculadora.Operacion operacion1 in miCalculadora.Historial)
+                    {
+                        Console.WriteLine($"\n---- OPERACION {k}----");
+                        Console.WriteLine($"\nTipo de operacion realizado: {operacion1.OperacionRealizada}");
+                        Console.WriteLine($"\nDato de entrada: {operacion1.ResultadoAnterior}");
+                        Console.WriteLine($"\nResultado: {operacion1.NuevoValor}");
+                        k++;
+                    }
+                } else
+                {
+                    Console.WriteLine($"Historial vacio.");
                 }
                 break;
 
