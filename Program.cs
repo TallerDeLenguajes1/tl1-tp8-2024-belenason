@@ -12,7 +12,7 @@ int idIngresado;
 string palabraClave;
 int contiene;
 
-/*GestorDeTareas gestor = new GestorDeTareas();
+GestorDeTareas gestor = new GestorDeTareas();
 List<Tarea> tareasPendientes = new List<Tarea>();
 List<Tarea> tareasRealizadas = new List<Tarea>();
 
@@ -153,7 +153,7 @@ do
                 break;
             }
         }
-} while (op != 0);*/
+} while (op != 0);
 
 Calculadora miCalculadora = new Calculadora();
 
