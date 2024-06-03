@@ -19,6 +19,7 @@ namespace GestionDeTareas
             Estado = estado;
         }
     };
+
     class GestorDeTareas
     {
         public List<Tarea> crearNTareas(int n)
